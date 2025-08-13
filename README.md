@@ -66,14 +66,14 @@ You can query cities by country code and paginate results:
     ```bash
     const cities = await fetchCities("PL", 1, 10);
     console.log(cities);
-    ```
 
-Each city record includes:
 
-- name: City name
-- country: Country code
-- pollution: Pollution data
-- description: Wikipedia summary
+    Each city record includes:
+
+    - name: City name
+    - country: Country code
+    - pollution: Pollution data
+    - description: Wikipedia summary
 
 ---
 
