@@ -21,11 +21,10 @@ Before running the app, make sure you have the following installed:
 
 - [Node.js](https://nodejs.org/) (v16 or higher recommended)
 - [npm](https://www.npmjs.com/) or [yarn](https://yarnpkg.com/)
-- API keys for:
-  - [OpenCage Geocoding API](https://opencagedata.com/)
-  - [Wikipedia API](https://www.mediawiki.org/wiki/API:Main_page) (no key required, but rate limits apply)
-  - Pollution data API
-  - username and password for Pollution data API
+- [OpenCage Geocoding API](https://opencagedata.com/)
+- [Wikipedia API](https://www.mediawiki.org/wiki/API:Main_page) (no key required, but rate limits apply)
+- Pollution data API
+- username and password for Pollution data API
 
 ---
 
@@ -43,6 +42,7 @@ Before running the app, make sure you have the following installed:
    npm install
 
 3. **Configure environment variables**
+   
     Create a .env file in the root directory:
 
     ```bash
@@ -58,39 +58,34 @@ Before running the app, make sure you have the following installed:
    ```bash
    npm run dev
 
+---
 ## 📘 Usage
+
 You can query cities by country code and paginate results:
+
     ```bash
     const cities = await fetchCities("PL", 1, 10);
     console.log(cities);
     ```
 
 Each city record includes:
-name: City name
 
-country: Country code
+- name: City name
+- country: Country code
+- pollution: Pollution data
+- description: Wikipedia summary
 
-pollution: Pollution data
-
-description: Wikipedia summary
+---
 
 ## 🧠 Technologies Used
 
-Node.js
-
-Express.js
-
-TypeScript
-
-Celeberate
-
-Axios
-
-Mock Pollution API
-
-OpenCage API
-
-Wikipedia API
-
-In-memory caching
+- Node.js
+- Express.js
+- TypeScript
+- Celeberate
+- Axios
+- Mock Pollution API
+- OpenCage API
+- Wikipedia API
+- In-memory caching
 
