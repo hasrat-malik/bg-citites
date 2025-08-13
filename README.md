@@ -59,19 +59,19 @@ Before running the app, make sure you have the following installed:
    npm run dev
 
 ---
+
 ## 📘 Usage
 
-    You can query cities by country code and paginate results:
+You can query cities by country code and paginate results:
 
-    ```bash
     const cities = await fetchCities("PL", 1, 10);
     console.log(cities);
-    ```
+
 
 Each city record includes:
 
 - name: City name
-- country: Country code
+- country: Country name
 - pollution: Pollution data
 - description: Wikipedia summary
 
