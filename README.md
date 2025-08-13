@@ -1,6 +1,6 @@
 # 🌆 bg-cities
 
-**bg-cities** is a Node.js application that fetches a list of cities from an external pollution data API, validates each city using the [OpenCage Geocoding API](https://opencagedata.com/), and enriches the results with descriptions from [Wikipedia](https://www.wikipedia.org/). The final output is a filtered and enriched list of valid cities with pollution data and contextual information.
+**bg-cities** is a Node.js application that fetches a list of cities from an external [pollution data API](https://be-recruitment-task.onrender.com/pollution), validates each city using the [OpenCage Geocoding API](https://opencagedata.com/), and enriches the results with descriptions from [Wikipedia](https://www.wikipedia.org/). The final output is a filtered and enriched list of valid cities with pollution data and contextual information.
 
 ---
 
@@ -21,9 +21,9 @@ Before running the app, make sure you have the following installed:
 
 - [Node.js](https://nodejs.org/) (v16 or higher recommended)
 - [npm](https://www.npmjs.com/) or [yarn](https://yarnpkg.com/)
-- [OpenCage Geocoding API](https://opencagedata.com/)
+- [OpenCage Geocoding API](https://opencagedata.com/) (api key required and also rate limits apply)
 - [Wikipedia API](https://www.mediawiki.org/wiki/API:Main_page) (no key required, but rate limits apply)
-- Pollution data API
+- [Pollution data API](https://be-recruitment-task.onrender.com/pollution) (access token required)
 - username and password for Pollution data API
 
 ---
@@ -61,19 +61,19 @@ Before running the app, make sure you have the following installed:
 ---
 ## 📘 Usage
 
-You can query cities by country code and paginate results:
+    You can query cities by country code and paginate results:
 
     ```bash
     const cities = await fetchCities("PL", 1, 10);
     console.log(cities);
+    ```
 
+Each city record includes:
 
-    Each city record includes:
-
-    - name: City name
-    - country: Country code
-    - pollution: Pollution data
-    - description: Wikipedia summary
+- name: City name
+- country: Country code
+- pollution: Pollution data
+- description: Wikipedia summary
 
 ---
 
